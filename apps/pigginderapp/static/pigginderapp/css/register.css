@@ -1,0 +1,60 @@
+body {
+  padding: 5%;
+  color: white;
+  background-color: #e95280;
+}
+
+h3, div {
+  color: #6c757d;
+}
+
+input {
+  margin-bottom: 2%;
+}
+
+.inner {
+  background-color: white;
+  border-radius: 8px;
+  padding: 3%;
+}
+
+.btn-secondary {
+  background-color: #e95280;
+  border-color: #e95280;
+}
+
+.title {
+  padding: 2%;
+}
+
+.subtitle {
+  margin-bottom: 2%;
+}
+
+.register, .login {
+  display: block;
+  margin: 3%;
+}
+
+/* FOOTER */
+.footer-row {
+  background-color: #e95280;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 5%;
+}
+
+.footer-title, .footer-copyright, i, a, .title {
+  color: white;
+}
+
+.social, .download {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.social-icon {
+  margin: 5%;
+}

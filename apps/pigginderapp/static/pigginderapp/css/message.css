@@ -1,0 +1,75 @@
+body {
+  padding: 5%;
+  color: white;
+  background-color: #e95280;
+}
+
+h3, div {
+  color: #6c757d;
+}
+
+.row {
+  background-color: white;
+  border-radius: 8px;
+  padding: 3%;
+  display: block;
+}
+
+.btn-secondary {
+  background-color: #e95280;
+  border-color: #e95280;
+}
+
+/* FOOTER */
+.footer-row {
+  background-color: #e95280;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 5%;
+}
+
+.footer-title, .footer-copyright, i, a {
+  color: white;
+}
+
+.social, .download {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.social-icon {
+  margin: 5%;
+}
+
+/* UNIQUE */
+.white-section {
+  padding: 5%;
+}
+
+.gonext {
+  text-align: center;
+  display: block;
+  margin-top: 2%;
+}
+
+.action-icon {
+  margin: 20px 10px;
+}
+
+.message_receiver {
+  background-color: grey;
+  color: white;
+  padding: 0.8%;
+  display: block;
+  text-align: center;
+}
+
+.previous_message {
+  text-align: left;
+}
+
+.my_message {
+  text-align: right;
+}

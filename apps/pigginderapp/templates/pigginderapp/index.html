@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Piggin'der</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'pigginderapp/images/favicon.ico' %}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700,900|Ubuntu" rel="stylesheet">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'pigginderapp/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'pigginderapp/css/index.css' %}">
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Piggin'der</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Let's Piggin'der</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#download">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+      <div class=row>
+        <div class="col-lg-6">
+          <h1 class="big-heading">Meet new and interesting piggies nearby.</h1>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="{% static 'pigginderapp/images/iphone.png'%}" alt="iphone-mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="white-section" id="features">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-check-circle fa-4x"></i>
+          <h4 class="feature-title">Easy to use.</h4>
+          <p>So easy to use, even your piggie could do it.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-bullseye fa-4x"></i>
+          <h4 class="feature-title"> Elite Clientele</h4>
+          <p>We have all the piggies, the nicest piggies.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i>
+          <h4 class="feature-title">Guaranteed to work.</h4>
+          <p>Find the love of your piggie's pawtner or get your money back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h4 class="testimonial-text">I no longer have to wheek in the air for love. I've found the hottest piggie on Piggin'der. Wheek.</h4>
+          <img class="testimonial-image" src="{% static 'pigginderapp/images/pig-img.jpg'%}" alt="pig-profile">
+          <em>Brownie, San Francisco</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h4 class="testimonial-text">My piggie used to wheek at 3am to find love, but with Piggin'der, she doesn't need to anymore. YAY!</h4>
+          <img class="testimonial-image" src="{% static 'pigginderapp/images/lady-img.jpg'%}" alt="lady-profile">
+          <em>Cupertino, California</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Press -->
+  <section class="colored-section" id="press">
+    <img class="press-logo" src="{% static 'pigginderapp/images/techcrunch.png'%}" alt="tc-logo">
+    <img class="press-logo" src="{% static 'pigginderapp/images/tnw.png'%}" alt="tnw-logo">
+    <img class="press-logo" src="{% static 'pigginderapp/images/bizinsider.png'%}" alt="biz-insider-logo">
+    <img class="press-logo" src="{% static 'pigginderapp/images/mashable.png'%}" alt="mashable-logo">
+  </section>
+
+  <!-- Plans -->
+  <section class="white-section" id="plans">
+    <div class="container-fluid">
+      <h3 class="section-heading">A Plan for Every Piggie's Needs</h3>
+      <div class="row">
+        <div class="plans-column col-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Looking for Friends</h3>
+            </div>
+            <div class="card-body">
+              <h3>Free</h3>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <a href="/register" class="btn btn-danger btn-block btn-lg">Sign Up</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="plans-column col-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Looking for Soulmate</h3>
+            </div>
+            <div class="card-body">
+              <h3>Free</h3>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <a href="/register" class="btn btn-danger btn-block btn-lg">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="colored-section" id="download">
+    <div class="container-fluid">
+      <h3 class="download-heading">Find the True Love of Your Piggie's Life Today.</h3>
+      <button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+      <button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="white-section px-0" id="footer">
+    <div class="container-fluid">
+      <p>
+        <a href="#"><i class="social-icon fab fa-twitter fa-lg"></i></a>
+        <a href="#"><i class="social-icon fab fa-facebook-f fa-lg"></i></a>
+        <a href="#"><i class="social-icon fab fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="social-icon fas fa-envelope fa-lg"></i></a>
+      </p>
+      <p>© Copyright 2019 Piggin'der</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

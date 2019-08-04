@@ -1,0 +1,82 @@
+body {
+  padding: 5%;
+  color: white;
+  background-color: #e95280;
+}
+
+h3, h4, div {
+  color: #6c757d;
+}
+
+.row {
+  background-color: white;
+  border-radius: 8px;
+  padding: 3%;
+}
+
+/* FOOTER */
+.footer-row {
+  background-color: #e95280;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 5%;
+}
+
+.footer-title, .footer-copyright, i, a {
+  color: white !important;
+}
+
+.social, .download {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.social-icon {
+  margin: 5%;
+}
+
+/* UNIQUE */
+.user_name, .liked {
+  margin-bottom: 10px;
+}
+
+.user_profile {
+  color: grey !important;
+}
+
+.pink {
+  color: #e95280 !important;
+}
+
+.user_profile_picture {
+  width: 70%;
+}
+
+.user_name, .browse {
+  font-size: 1.2rem;
+}
+
+.message_list {
+  background-color: rgb(216, 209, 209);
+  margin-top: 4%;
+  border-radius: 8px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+.sender a {
+  text-align: left;
+  color: rgb(196, 21, 97) !important;
+}
+
+img {
+  border-radius: 8px;
+}

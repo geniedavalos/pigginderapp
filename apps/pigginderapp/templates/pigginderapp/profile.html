@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Piggin'der</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'pigginderapp/images/favicon.ico'%}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700,900|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'pigginderapp/css/styles.css'%}">
+  <link rel="stylesheet" href="{% static 'pigginderapp/css/profile.css'%}">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">Piggin'der</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h2 class="title">Time to update your profile, {{user.first_name}}! </h2>
+    <div class="row">
+      <div class="picture col-lg-12">
+        {% block content %}
+        <h3>New Face Please</h3>
+        <img src="{{user.profile_picture.url}}" width="50%" class="current_pic">
+        <form action="/editing_profile" enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          <div class="upload">
+            {{form.as_p}}
+          </div>
+      </div>
+
+      <div class="description col-lg-12">
+        <h3>Time to introduce yourself</h3>
+        <div class="form-group">
+          <strong>Give us a short description about yourself...</strong>
+          {% if messages %}
+          {% for message in messages %}
+          {% if message.tags == "description error" %}
+          <small class="text-danger"> {{ message }}</small>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          <textarea class="form-control" name="description" rows="5">{{user.description}}</textarea>
+        </div>
+        <h3>Relationship Goal(s)</h3>
+        <div class="form-group">
+          <strong>Type either "Looking for friends" or "Looking for soulmate"</strong>
+          <input class="form-control" type="text" name="relationship_goal" value="{{user.relationship_goal}}">
+          {% if messages %}
+          {% for message in messages %}
+          {% if message.tags == "relationship_goal error" %}
+          <small class="text-danger"> {{ message }}</small>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="gonext col-lg-12">
+        <input type="submit" class="btn btn-secondary" value="Ready to meet all the piggies again!">
+      </div>
+      </form>
+      {% endblock %}
+    </div>
+  </div>
+  <div class="colored-section" id="footer">
+    <div class="footer-row">
+      <div class="col-lg-6 download">
+        <div class="footer-title">GET THE APP</div>
+        <button type="button" class="btn btn-light download-button"><i class="fab fa-apple"></i> Download</button>
+        <button type="button" class="btn btn-light download-button"><i class="fab fa-google-play"></i> Download</button>
+      </div>
+      <div class="col-lg-6 social">
+        <div class="footer-title ">STAY SOCIAL</div>
+        <a href="#"><i class="social-icon fab fa-twitter fa-lg"></i></a>
+        <a href="#"><i class="social-icon fab fa-facebook-f fa-lg"></i></a>
+        <a href="#"><i class="social-icon fab fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="social-icon fas fa-envelope fa-lg"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright my-2 col-12">© Copyright 2019 Piggin'der</div>
+  </div>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

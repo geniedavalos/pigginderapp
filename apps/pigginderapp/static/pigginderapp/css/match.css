@@ -1,0 +1,99 @@
+.matched {
+  font-family: 'Great Vibes', cursive;
+  color: white;
+}
+
+body {
+  padding: 5%;
+  color: white;
+  background-color: #e95280;
+}
+
+h3, div {
+  color: #6c757d;
+}
+
+.row {
+  background-color: grey;
+  border-radius: 8px;
+  padding: 3%;
+  display: block;
+}
+
+/* FOOTER */
+.footer-row {
+  background-color: #e95280;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 5%;
+}
+
+.footer-title, .footer i, .piggie_name, .footer-copyright, .footer-copyright, i, a {
+  color: white;
+}
+
+.social, .download {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.social-icon {
+  margin: 5%;
+}
+
+/* UNIQUE */
+.gonext {
+  text-align: center;
+  display: block;
+  margin-top: 2%;
+}
+
+.youandi {
+  color: white;
+}
+
+img {
+  border-radius: 8px;
+}
+
+.first_piggie, .second_piggie {
+  display: inline-block;
+  width: 45%;
+}
+
+.action-button {
+  margin-bottom: 3%;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.actions {
+  padding: 2%;
+  margin: 1%;
+}
+
+.ilike, .youlike {
+  color: white;
+  margin-bottom: 2%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.iliketitle, .youliketitle {
+  color: white;
+}
+
+.title {
+  margin: 1%;
+}
+
+.fa-times {
+  color: red;
+  margin-right: 10px;
+}
+
+.fa-heart {
+  color: #e95280;
+}

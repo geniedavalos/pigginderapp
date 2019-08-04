@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Piggin'der</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'pigginderapp/images/favicon.ico'%}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700,900|Ubuntu" rel="stylesheet">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'pigginderapp/css/styles.css'%}">
+  <link rel="stylesheet" href="{% static 'pigginderapp/css/register.css'%}">
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">Piggin'der</a>
+    </nav>
+    <h2 class="title">What time is it? It's Piggin'der Time.</h2>
+    <div class="inner container">
+      <div class="login">
+        <div class="subtitle">
+          <h3>Login</h3>
+        </div>
+        <form action="/login" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <strong>Email</strong>
+            <input type="email" class="form-control" name="input_email">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "input_email error" %}
+            <small class="text-danger"> {{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          <div class="form-group">
+            <strong>Password</strong>
+            <input type="password" class="form-control" name="input_password">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "input_password error" %}
+            <small class="text-danger"> {{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          <input type="submit" name="login" class="btn btn-secondary" value="Login">
+        </form>
+      </div>
+      <div class="register">
+        <div class="subtitle">
+          <h3>Registration</h3>
+        </div>
+        <form action="/register_processing" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <strong>First Name</strong>
+            <input type="text" class="form-control" name="first_name">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "first_name error" %}
+            <small class="text-danger">{{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          <div class="form-group">
+            <strong>Last Name</strong>
+            <input type="text" class="form-control" name="last_name">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "last_name error" %}
+            <small class="text-danger"> {{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          <div class="form-group">
+            <strong>Gender</strong>
+            <input type="text" class="form-control" name="gender">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "gender error" %}
+            <small class="text-danger"> {{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            <strong>Breed Type</strong>
+            <input type="text" class="form-control" name="breed_type">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "breed_type error" %}
+            <small class="text-danger"> {{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            <strong>Email</strong>
+            <input type="email" class="form-control" name="email">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "email error" %}
+            <small class="text-danger"> {{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          <div class="form-group">
+            <strong>Password</strong>
+            <input type="password" class="form-control" name="password">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "password error" %}
+            <small class="text-danger"> {{ message }}</small>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          <div class="form-group">
+            <strong> Confirm password</strong>
+            <input type="password" class="form-control" name="password_confirmation">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == "password_confirmation error" %}
+            <small class="text-danger"> {{ message }}</small> {% endif %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          <input type="submit" name="register" class="btn btn-secondary" value="Register">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="colored-section" id="footer">
+    <div class="footer-row">
+      <div class="col-lg-6 download">
+        <div class="footer-title">GET THE APP</div>
+        <button type="button" class="btn btn-light download-button"><i class="fab fa-apple"></i> Download</button>
+        <button type="button" class="btn btn-light download-button"><i class="fab fa-google-play"></i> Download</button>
+      </div>
+      <div class="col-lg-6 social">
+        <div class="footer-title ">STAY SOCIAL</div>
+        <a href="#"><i class="social-icon fab fa-twitter fa-lg"></i></a>
+        <a href="#"><i class="social-icon fab fa-facebook-f fa-lg"></i></a>
+        <a href="#"><i class="social-icon fab fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="social-icon fas fa-envelope fa-lg"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright my-2 col-12">© Copyright 2019 Piggin'der</div>
+  </div>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

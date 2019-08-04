@@ -1,0 +1,67 @@
+body {
+  padding: 5%;
+  color: white;
+  background-color: #e95280;
+}
+
+h3, div {
+  color: #6c757d;
+}
+
+.row {
+  background-color: white;
+  border-radius: 8px;
+  padding: 3%;
+}
+
+/* FOOTER */
+.footer-row {
+  background-color: #e95280;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 5%;
+}
+
+.footer-title, .footer-copyright, i, a, h2, .title {
+  color: white !important;
+}
+
+.social, .download {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.social-icon {
+  margin: 5%;
+}
+
+/* UNIQUE */
+.btn-secondary {
+  background-color: #e95280;
+  border-color: #e95280;
+}
+
+.gonext {
+  text-align: center;
+  display: block;
+  margin: 2%;
+}
+
+.upload p {
+  margin: 4%;
+}
+
+input[type="file"i] {
+  width: 30%;
+  text-align: center;
+}
+
+img {
+  border-radius: 8px;
+}
+
+#id_file, label {
+  font-size: 0.85rem;
+}
