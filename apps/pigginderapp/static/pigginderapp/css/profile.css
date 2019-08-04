@@ -65,3 +65,8 @@ img {
 #id_file, label {
   font-size: 0.85rem;
 }
+
+.download-button {
+  margin: 5% 3%;
+ }
+ 

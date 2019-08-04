@@ -30,7 +30,7 @@ h3, div {
 }
 
 .footer-title, .footer i, .piggie_name, .footer-copyright, .footer-copyright, i, a {
-  color: white;
+  color: white !important;
 }
 
 .social, .download {
@@ -58,13 +58,17 @@ img {
   border-radius: 8px;
 }
 
+.okie {
+  color: black !important;
+}
+
 .first_piggie, .second_piggie {
   display: inline-block;
   width: 45%;
 }
 
 .action-button {
-  margin-bottom: 3%;
+  margin: 2%;
   border-radius: 8px;
   background-color: white;
 }
@@ -97,3 +101,11 @@ img {
 .fa-heart {
   color: #e95280;
 }
+
+.download-button {
+  margin: 5% 3%;
+ }
+ 
+ .piggie_name {
+  font-size: 1.2rem;
+ }

@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 0 4.5rem;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: white !important;
+}
+
 .navbar-brand {
   font-family: "Ubuntu";
   font-size: 2.5rem;

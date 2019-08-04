@@ -33,7 +33,7 @@ h3, div {
 }
 
 .footer-title, .footer-copyright, i, a {
-  color: white;
+  color: white !important;
 }
 
 .social, .download {
@@ -91,3 +91,8 @@ img {
 .description {
   overflow-wrap: break-word;
 }
+
+.download-button {
+  margin: 5% 3%;
+ }
+ 

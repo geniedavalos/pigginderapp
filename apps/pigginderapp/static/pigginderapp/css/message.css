@@ -30,7 +30,7 @@ h3, div {
 }
 
 .footer-title, .footer-copyright, i, a {
-  color: white;
+  color: white !important;
 }
 
 .social, .download {
@@ -73,3 +73,8 @@ h3, div {
 .my_message {
   text-align: right;
 }
+
+.download-button {
+  margin: 5% 3%;
+ }
+ 

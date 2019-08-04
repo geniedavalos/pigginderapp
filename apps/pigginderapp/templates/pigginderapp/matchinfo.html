@@ -47,7 +47,7 @@
           {%for like in likes%}
           <div class="ilike">
             <img src="{{like.pigTwo.profile_picture.url}}" width="90%">
-            <div class="piggie_name">{{like.pigTwo.first_name}}</div>
+            <div class="piggie_name"><strong>{{like.pigTwo.first_name}}</strong></div>
             <div class="whattodo">
               <a href="/bye/{{like.pigTwo.id}}"><i class="action-icon fas fa-times fa-2x"></i></a>
             </div>
@@ -62,7 +62,7 @@
           {%if like_one.accepted == 0%}
           <div class="youlike">
             <img src="{{like_one.pigOne.profile_picture.url}}" width="90%">
-            <div class="piggie_name">{{like_one.pigOne.first_name}}</div>
+            <div class="piggie_name"><strong>{{like_one.pigOne.first_name}}</strong></div>
             <div class="whattodo">
               <a href="/friendzoning/{{like_one.pigOne.id}}"><i class="action-icon fas fa-times fa-2x"></i></a>
               <a href="/likingback/{{like_one.pigOne.id}}"><i class="action-icon fas fa-heart fa-2x"></i></a>
@@ -74,7 +74,7 @@
       </div>
       <div class="actions col-lg-12">
         <button class="action-button">
-          <a href="/dashboard" class="btn"><i class="fas fa-user-clock"></i> Okie...I will wait...</a>
+          <a href="/dashboard" class="btn okie"><i class="fas fa-user-clock"></i> Okie...I will wait...</a>
         </button>
       </div>
     </div>
