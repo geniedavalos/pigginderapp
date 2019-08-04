@@ -3,15 +3,12 @@
 
 ## Description
 A Tinder-like app for guinea pigs!
-<img src="https://imgur.com/3rCWbzR" alt="alt text" width="250"> 
-<img src="https://imgur.com/gl4yVmT" alt="alt text" width="250"> 
-<img src="https://imgur.com/iZ0IyNP" alt="alt text" width="250">
-<img src="https://imgur.com/hbfrhFZ" alt="alt text" width="250">
-<img src="https://imgur.com/7pLia1M" alt="alt text" width="250">
-<img src="https://imgur.com/YEEnSfA" alt="alt text" width="250">
-<img src="https://imgur.com/vabbt10" alt="alt text" width="250">
+![Landing](/pigginder_img/1.png)
+![Pick](/pigginder_img/5.png)
+![Message](/pigginder_img/6.png)
+![Updated_Dashboard](/pigginder_img/7.png)
 
-## Installation
+## Get Started
 Piggin'der works with Python 3.
 
 ## Roadmap
