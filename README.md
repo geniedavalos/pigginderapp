@@ -1,5 +1,5 @@
 # pigginderapp
-![Platform](https://img.shields.io/badge/django-green)
+![Platform](https://img.shields.io/badge/Django-green)
 
 ## Description
 A Tinder-like app for guinea pigs!
